@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110853731-1"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+  		gtag('config', 'UA-110853731-1');
+	</script>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Lensless Learning</title>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<link href="styles/minimal.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- Navigation bar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-nav">	
+		<div class="container-fluid">
+    		<ul class="nav navbar-nav">
+      			<li class="nav-item"><a href="index.html">Home</a></li>
+      			<li class="nav-item active"><a href="gallery.html">Results</a></li>
+				<li class="nav-item"><a href="https://github.com/Waller-Lab/LenslessLearning">Code</a></li>
+				<li class="nav-item"><a href="dataset.html">Dataset</a></li>
+    		</ul>
+      	</div>
+    </div>
+</nav> 
+
+<div class="container">
+	<div class="row">	
+		<h2><b>Reconstruction Results</b></h2>
+		<p> Here we show the raw lensless camera input (left) as well as a classic reconstruction (using ADMM), vs. a deep method (U-Net), vs our method which is based on unrolled optimization.</p>
+		<h3>Example reconstructions from test set:</h3>
+		<div class="container-2">
+
+			<div class="row">
+				<img class="float-center" src="resources/sample_recons.png" style="width:800px"> 
+			</div>
+			<h3>Example reconstructions in the wild:</h3>
+			<div class="row">
+				<img class="float-center" src="resources/sample_recons_toys.png" style="width:800px"> 
+			</div>
+
+
+		</div>
+	</div>
+
+
+		
+
+</div>
+<nav class="navbar navbar-default">
+</nav>
+
+</body>
+</html>
