@@ -2,7 +2,7 @@
 
 ### [Project Page](https://waller-lab.github.io/LenslessLearning)
 This code is based on the paper: "Learned reconstructions for practical
-mask-based lensless imaging" available here: link coming soon
+mask-based lensless imaging" available here: (https://arxiv.org/abs/1908.11502)
 
 ### Setup:
 Clone this project using:
