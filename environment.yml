@@ -1,4 +1,4 @@
-name: pytorch
+name: lensless_learning
 channels:
   - pytorch
   - conda-forge
@@ -137,6 +137,7 @@ dependencies:
   - pytorch=1.0.1=py3.7_cuda9.0.176_cudnn7.4.2_2
   - torchvision=0.2.2=py_3
   - pip:
+    - lpips==0.1.4
     - dask==1.1.4
     - torch==1.0.1.post2
 prefix: /home/kristina/anaconda3/envs/pytorch

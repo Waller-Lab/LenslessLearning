@@ -232,15 +232,13 @@ def save_model_summary(model, admm, filename, device, description, test_loader):
 
 
 import sys
-sys.path.append('/home/kristina/PerceptualSimilarity')
-from models import dist_model as dm
+from lpips import LPIPS
 from admm_helper_functions_torch import *
 
 
 def test_training_images(model, model_admm, test_loader, device):
-    
-    lpipsloss = dm.DistModel()
-    lpipsloss.initialize(model='net-lin',net='alex',use_gpu=True,version='0.1')
+
+    lpipsloss = LPIPS(net='alex', version='0.1')
 
     mse_loss = torch.nn.MSELoss(size_average=None)
 
@@ -326,11 +324,8 @@ def test_training_images(model, model_admm, test_loader, device):
         return loss_dict
     
 def test_training_images2(model, test_loader, device):
-    
-    #model = model.eval()
 
-    lpipsloss = dm.DistModel()
-    lpipsloss.initialize(model='net-lin',net='alex',use_gpu=True,version='0.1')
+    lpipsloss = LPIPS(net='alex', version='0.1')
 
 
     mse_loss = torch.nn.MSELoss(size_average=None)
@@ -428,9 +423,7 @@ def run_timing_test(model, test_loader, device, num_trials = 100):
 ##### Plotting functions 
 def preplot(image):
     image = np.transpose(image, (1,2,0))
-    image_color = np.zeros_like(image); 
-    image_color[:,:,0] = image[:,:,2]; image_color[:,:,1]  = image[:,:,1]
-    image_color[:,:,2] = image[:,:,0];
+    image_color = cv.cvtColor(image, cv.COLOR_BGR2RGB)
     out_image = np.flipud(np.clip(image_color, 0,1))
     return out_image[60:,62:-38,:]
 
